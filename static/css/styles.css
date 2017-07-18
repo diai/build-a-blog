@@ -1,0 +1,17 @@
+input, label {
+    display: block;
+    float: padding: 10px 10px 10px 10px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+.error {
+    color: red;
+}
+
+input, label {
+    display: block
+}

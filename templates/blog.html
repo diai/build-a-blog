@@ -1,14 +1,20 @@
 {% extends "base.html" %}
-{% block title %} Build a Blog {% endblock %}
-{% block header %} Build a Blog {% endblock %}
-{% block content %}
-    <ul>
-        {% for blog in blogs %}
-        <li>
-            <h2> <a href= {{ "./blog?id=" ~ blog.id }} > {{blog.title}} </a> </h2> 
-            <p> {{blog.body}} </p>
-            </li>
-        {% endfor %}
-    </ul>
 
+{% block content %}
+
+    {% if blogs|length == 0 %}
+        <p>No posts yet</p>
+
+    {% else %}
+        <ul>
+            {% for blog in blogs %}
+                <li>
+                    <h2><a href="./blog?id={{ blog.id }}"> {{ blog.title }} </a></h2>
+                    <p> {{ blog.body }} </p>
+                </li>
+                <hr/>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
 {% endblock %}
