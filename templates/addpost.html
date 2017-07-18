@@ -5,14 +5,18 @@
 {% block content %}
     <form method='post'>
         <label>
-            Title for your new blog: </label>
+            Title for your new blog:
+            <br/>
             <input type="text" name='blog_title' value='{{title}}' />
             <span class="error">{{title_error}}</span>
-        <label>
-            Your new blog: </label>
-            <input type="text" name="blog_content" value='{{content}}'/>
+            </label>
+            <br/><br/>
+        <label> 
+            Your new blog:
+            <br/>
+            <textarea name="blog_content" value='{{content}}'>blog here...</textarea>
             <span class="error">{{content_error}}</span>
-
+        </label><br/>
         <input type="submit" value='Add Blog' />
     </form>
 {% endblock %}
